@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All About Music</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1>All About Music</h1>
+            <p>Your live hub for trending hits and music history.</p>
+        </header>
+
+        <section id="trending-now" class="card" style="margin-bottom: 2rem;">
+            <div class="feed-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 15px;">
+                <h2 style="margin: 0;">Trending Now: Top 5</h2>
+                <div class="custom-select-wrapper" id="country-dropdown">
+    <div class="custom-select-trigger" id="dropdown-trigger">
+        <img src="https://flagcdn.com/w20/mx.png" alt="flag"> <span>Mexico</span>
+    </div>
+    <div class="custom-options" id="dropdown-options">
+        </div>
+</div>
+                </select>
+            </div>
+            <div id="top-5-grid" class="grid-container">
+                <p class="loading" style="color: var(--text-muted); padding: 1rem;">Fetching live data...</p>
+            </div>
+        </section>
+
+        <section id="birthday-lookup" class="card">
+            <h2>Time Machine: Find Your Birthday Song</h2>
+            <div class="input-group">
+                <input type="date" id="birth-date" required>
+                <button id="search-btn">Find My Song</button>
+            </div>
+            
+            <div id="result-display" class="hidden">
+            </div>
+        </section>
+    </main>
+
+    <div id="visualizer-wrapper" class="hidden">
+        <div id="visualizer-hint">Click to Expand</div>
+        <canvas id="visualizer-canvas"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
